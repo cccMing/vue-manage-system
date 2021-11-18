@@ -1,6 +1,6 @@
 <template>
     <div class="login-wrap">
-        <div class="ms-login">
+        <div class="ms-login" v-loading="loading" element-loading-background="rgba(255, 255, 255, 0.7)">
             <div class="ms-title">后台管理系统</div>
             <el-form :model="param" :rules="rules" ref="login" label-width="0px" class="ms-content">
                 <el-form-item prop="username">
@@ -39,21 +39,25 @@ export default {
                 username: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
                 password: [{ required: true, message: '请输入密码', trigger: 'blur' }],
             },
+            loading: false
         };
     },
     methods: {
         submitForm() {
-            this.$refs.login.validate(valid => {
-                if (valid) {
-                    this.$message.success('登录成功');
-                    localStorage.setItem('ms_username', this.param.username);
-                    this.$router.push('/');
-                } else {
-                    this.$message.error('请输入账号和密码');
-                    console.log('error submit!!');
-                    return false;
-                }
-            });
+                this.$refs.login.validate(valid => {
+                    if (valid) {
+                        this.loading = true; // 只是测试用
+                        setTimeout(() => {
+                            this.$message.success('登录成功');
+                            localStorage.setItem('ms_username', this.param.username);
+                            this.$router.push('/');
+                        }, 800);
+                    } else {
+                        this.$message.error('请输入账号和密码');
+                        console.log('error submit!!');
+                        return false;
+                    }
+                });
         },
     },
 };
@@ -82,7 +86,7 @@ export default {
     width: 350px;
     margin: -190px 0 0 -175px;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(80, 80, 80, 0.7);
     overflow: hidden;
 }
 .ms-content {

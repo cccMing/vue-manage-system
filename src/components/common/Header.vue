@@ -27,16 +27,18 @@
                     </el-tooltip>
                     <span class="btn-bell-badge" v-if="message"></span>
                 </div>
-                <!-- 用户头像 -->
-                <div class="user-avator">
-                    <img src="../../assets/img/img.jpg" />
-                </div>
                 <!-- 用户名下拉菜单 -->
                 <el-dropdown class="user-name" trigger="click" @command="handleCommand">
-                    <span class="el-dropdown-link">
-                        {{username}}
-                        <i class="el-icon-caret-bottom"></i>
-                    </span>
+                    <div style="display: flex;align-items: center;">
+                        <!-- 用户头像 -->
+                        <div class="user-avator">
+                            <img src="https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif?imageView2/1/w/80/h/80" />
+                        </div>
+                        <span class="el-dropdown-link">
+                            {{username}}
+                            <i class="el-icon-caret-bottom"></i>
+                        </span>
+                    </div>
                     <el-dropdown-menu slot="dropdown">
                         <a href="https://github.com/lin-xin/vue-manage-system" target="_blank">
                             <el-dropdown-item>项目仓库</el-dropdown-item>
@@ -118,7 +120,7 @@ export default {
     position: relative;
     box-sizing: border-box;
     width: 100%;
-    height: 70px;
+    height: 54px;
     font-size: 22px;
     color: #fff;
 }
@@ -126,20 +128,20 @@ export default {
     float: left;
     padding: 0 21px;
     cursor: pointer;
-    line-height: 70px;
+    line-height: 54px;
 }
 .header .logo {
     float: left;
     width: 250px;
-    line-height: 70px;
+    line-height: 54px;
 }
 .header-right {
     float: right;
-    padding-right: 50px;
+    padding-right: 10px;
 }
 .header-user-con {
     display: flex;
-    height: 70px;
+    height: 54px;
     align-items: center;
 }
 .btn-fullscreen {
@@ -151,7 +153,7 @@ export default {
 .btn-fullscreen {
     position: relative;
     width: 30px;
-    height: 30px;
+    /* height: 30px; */
     text-align: center;
     border-radius: 15px;
     cursor: pointer;
@@ -174,12 +176,14 @@ export default {
 }
 .user-avator {
     margin-left: 20px;
+    cursor: pointer;
 }
 .user-avator img {
     display: block;
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    margin-right: 5px;
 }
 .el-dropdown-link {
     color: #fff;
