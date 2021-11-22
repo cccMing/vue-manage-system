@@ -186,4 +186,12 @@ export default {
 .sidebar > ul {
     height: 100%;
 }
+/* .el-menu-item { 更改左侧菜单的高度，要下面单独写个style放上去，开发工具调出来的不太合理
+    height: 40px;
+    line-height: 40px;
+}
+.el-submenu__title {
+    height: 40px;
+    line-height: 40px;
+} */
 </style>

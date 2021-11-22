@@ -155,6 +155,10 @@
         color: #fff;
     }
 
+    .tags-li-icon:hover {
+        color: red;
+    }
+
     .tags-li-title {
         float: left;
         max-width: 80px;

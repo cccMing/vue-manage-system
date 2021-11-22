@@ -10,7 +10,8 @@ export const messages = {
             p3: '只要能把自己的事做好，并让自己快乐，你就领先于大多数人了。',
             title2: '组件插值',
             info: 'Element组件需要国际化，请参考 {action}。',
-            value: '文档'
+            value: '文档',
+            systemName: '牛逼系统'
         }
     },
     'en': {
@@ -24,7 +25,8 @@ export const messages = {
             p3: "If you can do what you do best and be happy, you're further along in life  than most people.",
             title2: 'Component interpolation',
             info: 'The default language of Element is Chinese. If you wish to use another language, please refer to the {action}.',
-            value: 'documentation'
+            value: 'documentation',
+            systemName: 'Nubility System'
         }
     }
 }

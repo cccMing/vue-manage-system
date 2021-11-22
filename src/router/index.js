@@ -11,7 +11,7 @@ export default new Router({
         },
         {
             path: '/',
-            component: () => import(/* webpackChunkName: "home" */ '../components/common/Home.vue'),
+            component: () => import(/* webpackChunkName: "home" */ '../components/common/Home.vue'), // 这么写实现懒加载
             meta: { title: '自述文件' },
             children: [
                 {

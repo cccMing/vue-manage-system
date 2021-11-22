@@ -2,13 +2,15 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import ElementUI from 'element-ui';
-import VueI18n from 'vue-i18n';
+import VueI18n from 'vue-i18n'; // 多语言
 import { messages } from './components/common/i18n';
 import 'element-ui/lib/theme-chalk/index.css'; // 默认主题
 // import './assets/css/theme-green/index.css'; // 浅绿色主题
-import './assets/css/icon.css';
+import './assets/css/icon.css'; //自定义阿里图标
 import './components/common/directives';
 import 'babel-polyfill';
+
+// https://www.cnblogs.com/linxin/p/9638461.html
 
 Vue.config.productionTip = false;
 Vue.use(VueI18n);
@@ -45,4 +47,4 @@ new Vue({
     router,
     i18n,
     render: h => h(App)
-}).$mount('#app');
+}).$mount('#app'); // 主页在public/index.html
