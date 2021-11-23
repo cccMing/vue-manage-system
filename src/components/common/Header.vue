@@ -11,7 +11,8 @@
                 <!-- 全屏显示 -->
                 <div class="btn-fullscreen" @click="handleFullScreen">
                     <el-tooltip effect="dark" :content="fullscreen?`取消全屏`:`全屏`" placement="bottom">
-                        <i class="el-icon-rank"></i>
+                        <!-- svg方式引入图标 -->
+                        <svg-icon :icon-class="fullscreen? 'exit-fullscreen':'fullscreen'" />
                     </el-tooltip>
                 </div>
                 <!-- 消息中心 -->
@@ -52,9 +53,11 @@
 </template>
 <script>
 import bus from '../common/bus';
+import svgIcons from './svg-icons.js';
 export default {
     data() {
         return {
+            svgIcons,
             collapse: false,
             fullscreen: false,
             name: 'linxin',
@@ -145,9 +148,9 @@ export default {
     align-items: center;
 }
 .btn-fullscreen {
-    transform: rotate(45deg);
+    /* transform: rotate(45deg); */
     margin-right: 5px;
-    font-size: 24px;
+    font-size: 18px;
 }
 .btn-bell,
 .btn-fullscreen {

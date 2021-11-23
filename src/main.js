@@ -9,6 +9,7 @@ import 'element-ui/lib/theme-chalk/index.css'; // 默认主题
 import './assets/css/icon.css'; //自定义阿里图标
 import './components/common/directives';
 import 'babel-polyfill';
+import './assets/icons'
 
 // https://www.cnblogs.com/linxin/p/9638461.html
 
